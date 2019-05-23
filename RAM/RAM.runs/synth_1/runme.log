@@ -1,0 +1,336 @@
+
+*** Running vivado
+    with args -log RAMWrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAMWrapper.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source RAMWrapper.tcl -notrace
+Command: synth_design -top RAMWrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9734 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1389.094 ; gain = 0.000 ; free physical = 2093 ; free virtual = 15546
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RAMWrapper' [/home/danielmartins/Documentos/Universidade/CR/Projecto/RAM/RAM.srcs/sources_1/new/RAMWrapper.vhd:46]
+WARNING: [Synth 8-614] signal 'we' is read in the process but is not in the sensitivity list [/home/danielmartins/Documentos/Universidade/CR/Projecto/RAM/RAM.srcs/sources_1/new/RAMWrapper.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'RAMWrapper' (1#1) [/home/danielmartins/Documentos/Universidade/CR/Projecto/RAM/RAM.srcs/sources_1/new/RAMWrapper.vhd:46]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1390.988 ; gain = 1.895 ; free physical = 2122 ; free virtual = 15576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1390.988 ; gain = 1.895 ; free physical = 2122 ; free virtual = 15576
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1398.992 ; gain = 9.898 ; free physical = 2121 ; free virtual = 15575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1407.000 ; gain = 17.906 ; free physical = 2110 ; free virtual = 15564
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	             1024 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   1024 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module RAMWrapper 
+Detailed RTL Component Info : 
++---Registers : 
+	             1024 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   1024 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[151] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[152] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[153] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[154] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[155] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[156] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[157] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[158] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[159] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[160] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[161] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[162] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[163] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[164] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[165] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[166] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[167] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[168] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[169] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[170] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[171] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[172] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[173] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[174] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[175] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[176] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[177] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[178] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[179] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[180] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[181] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[182] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[183] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[184] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[185] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[186] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[187] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[188] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[189] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[190] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[192] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[193] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[194] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[195] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[196] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[197] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[198] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[199] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[200] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[201] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[202] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[203] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[204] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[205] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[206] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[207] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[208] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[209] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[210] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[211] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[212] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[213] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[214] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[215] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[216] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[217] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[218] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[219] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[220] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[221] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[222] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[223] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[224] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[225] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[226] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[227] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[228] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[229] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[230] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[231] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[232] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[233] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[234] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[235] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[236] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[237] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[238] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[239] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[240] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[241] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[242] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[243] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[244] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[245] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[246] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[247] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vector_reg[250] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1938 ; free virtual = 15394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1938 ; free virtual = 15394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1937 ; free virtual = 15394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1932 ; free virtual = 15388
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1931 ; free virtual = 15388
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1931 ; free virtual = 15388
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1932 ; free virtual = 15388
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1932 ; free virtual = 15388
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1932 ; free virtual = 15388
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     7|
+|3     |LUT3 |    37|
+|4     |LUT4 |    20|
+|5     |LUT5 |   111|
+|6     |LUT6 |   219|
+|7     |FDRE |   151|
+|8     |IBUF |    33|
+|9     |OBUF |  1024|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1603|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1932 ; free virtual = 15388
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.828 ; gain = 159.734 ; free physical = 1933 ; free virtual = 15389
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1548.836 ; gain = 159.734 ; free physical = 1933 ; free virtual = 15389
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Netlist 29-101] Netlist 'RAMWrapper' is not ideal for floorplanning, since the cellview 'RAMWrapper' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1675.855 ; gain = 0.000 ; free physical = 1857 ; free virtual = 15314
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1675.855 ; gain = 286.867 ; free physical = 1914 ; free virtual = 15370
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1675.855 ; gain = 0.000 ; free physical = 1914 ; free virtual = 15370
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/danielmartins/Documentos/Universidade/CR/Projecto/RAM/RAM.runs/synth_1/RAMWrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RAMWrapper_utilization_synth.rpt -pb RAMWrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 23 12:55:06 2019...
