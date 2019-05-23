@@ -1,0 +1,6 @@
+#ifndef GENERATE_H_   /* Include guard */
+#define GENERATE_H_
+
+int generate(int x);  /* An example function declaration */
+
+#endif // FOO_H_

@@ -1,0 +1,2735 @@
+17:59:35 **** Build of project MainProgram_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Finished building libraries
+17:59:36 **** Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:11:57 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+18:11:58 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:50:10: fatal error: xil_printf.h: No such file or directory
+ #include "xil_printf.h"
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+18:12:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+../src/platform.c:34:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+src/subdir.mk:24: recipe for target 'src/platform.o' failed
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/platform.o] Error 1
+18:13:05 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+../src/platform.c:34:10: fatal error: xil_cache.h: No such file or directory
+ #include "xil_cache.h"
+src/subdir.mk:24: recipe for target 'src/platform.o' failed
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/platform.o] Error 1
+18:16:57 **** Auto Build of project MainProgram_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Finished building libraries
+18:16:59 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:17:11 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:20:19 **** Clean-only build of project MainProgram_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/standalone_v6_8/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_8/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+18:20:19 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+18:20:19 **** Build of project MainProgram_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Finished building libraries
+18:20:20 **** Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:20:26 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:21:49 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:26:39 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:13: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
+     input = XGpio_DiscreteRead(&GPIO_0, 2);
+             ^~~~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+../src/helloworld.c:58:33: error: 'GPIO_0' undeclared (first use in this function)
+     input = XGpio_DiscreteRead(&GPIO_0, 2);
+                                 ^~~~~~
+../src/helloworld.c:58:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+18:26:56 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:33: error: 'GPIO_0' undeclared (first use in this function); did you mean 'XGPIO_H'?
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+     input = XGpio_DiscreteRead(&GPIO_0, 2);
+                                 ^~~~~~
+                                 XGPIO_H
+../src/helloworld.c:59:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+18:27:05 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6476	    276	   3152	   9904	   26b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:27:12 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:31:32 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:32:02 **** Clean-only build of project MainProgram_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/standalone_v6_8/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_8/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_3/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+18:32:02 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+18:32:02 **** Build of project MainProgram_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Finished building libraries
+18:32:03 **** Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6476	    276	   3152	   9904	   26b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:32:06 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:32:26 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6476	    276	   3152	   9904	   26b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:32:30 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:34:15 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:34:28 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6476	    276	   3152	   9904	   26b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:34:35 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:36:26 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6660	    276	   3152	  10088	   2768	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:36:38 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:37:36 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:37:47 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:38:16 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:38:21 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:38:44 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:22 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6660	    276	   3152	  10088	   2768	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:39:28 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:37 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:51 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:40:09 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6660	    276	   3152	  10088	   2768	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:40:12 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:40:26 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:41:43 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6700	    276	   3152	  10128	   2790	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:47:47 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6700	    276	   3152	  10128	   2790	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:48:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: implicit declaration of function 'MB_sleep'; did you mean 'MB_Sleep'? [-Wimplicit-function-declaration]
+         MB_sleep(100);
+         ^~~~~~~~
+         MB_Sleep
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+/tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/MainProgram/Debug/../src/helloworld.c:71: undefined reference to `MB_sleep'
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+makefile:36: recipe for target 'MainProgram.elf' failed
+18:50:07 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6700	    276	   3152	  10128	   2790	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:52:06 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    276	   3152	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:52:14 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:52:32 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:54:02 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:54:41 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    276	   3152	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:54:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:20: warning: unknown escape sequence: '\040'
+         xil_printf("SW : %x\     ",input);
+                    ^~~~~~~~~~~~~~~
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6760	    276	   3148	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:55:01 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6760	    276	   3148	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:55:03 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:55:36 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    276	   3152	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:55:40 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    276	   3152	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:55:42 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:55:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6756	    276	   3152	  10184	   27c8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:55:59 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:57:47 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:57:49 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+18:58:58 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+18:59:42 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+/tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/MainProgram/Debug/../src/helloworld.c:57: multiple definition of `main'
+./src/generate.o:/tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/MainProgram/Debug/../src/generate.c:2: first defined here
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:00:20 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:6:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:01:20 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:7:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'balance' [-Wunused-variable]
+  int balance[words];
+      ^~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:02:06 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:02:10 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:03:16 **** Build of project MainPackage_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_8/src
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+Running Make libs in microblaze_0/libsrc/cpu_v2_8/src
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_3/src
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Finished building libraries
+19:03:17 **** Build of configuration Debug for project MainPackage ****
+make all 
+Building file: ../src/main.cc
+Invoking: MicroBlaze g++ compiler
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../MainPackage_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: MainPackage.elf
+Invoking: MicroBlaze g++ linker
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../MainPackage_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainPackage.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: MainPackage.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainPackage.elf  |tee "MainPackage.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1952	    268	   3108	   5328	   14d0	MainPackage.elf
+Finished building: MainPackage.elf.size
+ 
+19:04:20 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/generate.o ./src/helloworld.o ./src/platform.o  ./src/generate.d ./src/helloworld.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+19:04:20 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building file: ../src/helloworl.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworl.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworl.d" -MT"src/helloworl.o" -o "src/helloworl.o" "../src/helloworl.c"
+../src/helloworl.c: In function 'main':
+../src/helloworl.c:72:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworl.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworl.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworl.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:04:29 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:04:52 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/generate.o ./src/helloworl.o ./src/platform.o  ./src/generate.d ./src/helloworl.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+19:04:52 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:05:01 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:05:23 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/generate.o ./src/platform.o  ./src/generate.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+19:05:23 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:05:28 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+makefile:36: recipe for target 'MainProgram.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:05:42 **** Clean-only build of configuration Debug for project MainProgram ****
+make clean 
+rm -rf  ./src/generate.o ./src/platform.o  ./src/generate.d ./src/platform.d  MainProgram.elf.size  MainProgram.elf
+ 
+19:05:42 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:1:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:3:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:05:45 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:11:42 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:1:10: error: #include expects "FILENAME" or <FILENAME>
+ #include stdlib.h;
+          ^~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:10:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:3:5: note: declared here
+ int generate(int words,int bits)
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+     ^~~~~~~~
+../src/generate.c:5:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+make: *** [src/generate.o] Error 1
+19:13:20 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:3:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:5:6: warning: unused variable 'generate' [-Wunused-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7020	    276	   3152	  10448	   28d0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:14:19 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:8:24: error: invalid operands to binary & (have 'int' and 'char *')
+   generate[i] = rand() & "0FF";
+                 ~~~~~~ ^
+../src/generate.c:10:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:3:5: note: declared here
+ int generate(int words,int bits)
+     ^~~~~~~~
+../src/generate.c:5:6: warning: variable 'generate' set but not used [-Wunused-but-set-variable]
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+  int generate[words];
+      ^~~~~~~~
+make: *** [src/generate.o] Error 1
+19:15:09 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:2: warning: 'return' with no value, in function returning non-void
+  return ;
+  ^~~~~~
+../src/generate.c:3:7: note: declared here
+ int * generate(int words,int bits)
+       ^~~~~~~~
+../src/generate.c:5:6: warning: variable 'generate' set but not used [-Wunused-but-set-variable]
+  int generate[words];
+      ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:15:15 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:15:47 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:16:28 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:16:56 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:17:35 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:2:12: warning: extra tokens at end of #include directive
+ #include <>generate.h>
+            ^~~~~~~~
+../src/generate.c:2:10: error: empty filename in #include
+ #include <>generate.h>
+          ^~
+../src/generate.c: In function 'generate':
+../src/generate.c:11:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+make: *** [src/generate.o] Error 1
+19:17:38 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:2:10: fatal error: generate.h: No such file or directory
+ #include <generate.h>
+          ^~~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+compilation terminated.
+make: *** [src/generate.o] Error 1
+19:17:58 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:2:10: fatal error: generate.h: No such file or directory
+ #include <generate.h>
+          ^~~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+compilation terminated.
+make: *** [src/generate.o] Error 1
+19:18:06 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:2:10: fatal error: generate.h: No such file or directory
+ #include <generate.h>
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/generate.o] Error 1
+19:18:17 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:2:10: fatal error: generate.h: No such file or directory
+ #include <generate.h>
+          ^~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+make: *** [src/generate.o] Error 1
+19:18:23 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:11:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:18:36 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:18:38 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:18:47 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15888	   1316	   3212	  20416	   4fc0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:19:05 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17856	   1316	   3212	  22384	   5770	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:19:12 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17856	   1316	   3212	  22384	   5770	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:19:14 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:19:38 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+../src/helloworld.c:69:11: warning: unused variable 'words' [-Wunused-variable]
+     int * words = generate(128,0xFF);
+           ^~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17860	   1316	   3216	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:19:44 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:20:01 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:11: warning: passing argument 1 of 'print' from incompatible pointer type [-Wincompatible-pointer-types]
+     print(words);
+           ^~~~~
+In file included from /tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:231:9: note: expected 'const char *' but argument is of type 'int *'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17876	   1316	   3216	  22408	   5788	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:20:09 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:11: warning: passing argument 1 of 'print' from incompatible pointer type [-Wincompatible-pointer-types]
+     print(&words);
+           ^
+In file included from /tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:231:9: note: expected 'const char *' but argument is of type 'int **'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17880	   1316	   3212	  22408	   5788	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:20:16 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(words[0]);
+           ^~~~~
+In file included from /tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17884	   1316	   3216	  22416	   5790	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:20:21 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:20:40 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:11: warning: passing argument 1 of 'print' makes pointer from integer without a cast [-Wint-conversion]
+     print(words[0]);
+           ^~~~~
+In file included from /tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:231:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14668	   1312	   3212	  19192	   4af8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:20:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: passing argument 1 of 'xil_printf' makes pointer from integer without a cast [-Wint-conversion]
+     xil_printf(words[0]);
+                ^~~~~
+In file included from /tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/microblaze-xilinx-elf/include/stdio.h:229:9: note: expected 'const char *' but argument is of type 'int'
+ void    _EXFUN(xil_printf, (const char*, ...));
+         ^
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17848	   1316	   3212	  22376	   5768	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:21:15 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17864	   1316	   3212	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:21:17 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:21:38 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17864	   1316	   3212	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:21:40 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:21:51 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:26: error: invalid type argument of unary '*' (have 'int')
+src/subdir.mk:27: recipe for target 'src/helloworld.o' failed
+     xil_printf("%x \n\r",*words[0]);
+                          ^~~~~~~~~
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:21:57 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17864	   1316	   3212	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:22:34 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   printf("%x \n\r",generate[i]);
+   ^~~~~~
+../src/generate.c:10:3: warning: incompatible implicit declaration of built-in function 'printf'
+../src/generate.c:10:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../src/generate.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 36552 bytes
+makefile:36: recipe for target 'MainProgram.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:22:39 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+../src/helloworld.c:69:11: warning: unused variable 'words' [-Wunused-variable]
+     int * words = generate(128,0xFF);
+           ^~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33688 bytes
+makefile:36: recipe for target 'MainProgram.elf' failed
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:22:40 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'MainProgram.elf' failed
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33688 bytes
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:23:00 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:13:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33688 bytes
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:23:02 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'MainProgram.elf' failed
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33688 bytes
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:23:06 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'MainProgram.elf' failed
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33688 bytes
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:23:32 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:13:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33664 bytes
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'MainProgram.elf' failed
+make: *** [MainProgram.elf] Error 1
+19:23:34 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: MainProgram.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+makefile:36: recipe for target 'MainProgram.elf' failed
+/tools/Xilinx/SDK/2018.3/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/bin/ld: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 33664 bytes
+collect2: error: ld returned 1 exit status
+make: *** [MainProgram.elf] Error 1
+19:23:44 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:13:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17856	   1316	   3212	  22384	   5770	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:23:46 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:24:00 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:13:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17880	   1316	   3212	  22408	   5788	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:24:02 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:26:11 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14644	   1312	   3212	  19168	   4ae0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:26:16 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17864	   1316	   3212	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:26:18 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:26:45 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+  return generate;
+         ^~~~~~~~
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17864	   1316	   3212	  22392	   5778	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:26:50 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:5: error: conflicting types for 'generate'
+ int generate(int words,int bits)
+     ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return generate;
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+         ^~~~~~~~
+../src/generate.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+make: *** [src/generate.o] Error 1
+19:27:05 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:5: error: conflicting types for 'generate'
+ int generate(int words,int bits)
+     ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return generate;
+         ^~~~~~~~
+../src/generate.c:12:9: warning: function returns address of local variable [-Wreturn-local-addr]
+make: *** [src/generate.o] Error 1
+19:27:37 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c: In function 'generate':
+../src/generate.c:10:2: error: expected identifier or '(' before 'for'
+  for( int i = 0; i < words ;i++){
+  ^~~
+../src/generate.c:10:18: error: 'i' undeclared (first use in this function)
+  for( int i = 0; i < words ;i++){
+                  ^
+../src/generate.c:10:18: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+../src/generate.c:10:32: error: expected ';' before ')' token
+  for( int i = 0; i < words ;i++){
+                                ^
+../src/generate.c:10:32: error: expected statement before ')' token
+../src/generate.c:13:9: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+  return generate;
+         ^~~~~~~~
+make: *** [src/generate.o] Error 1
+19:28:03 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17380	   1316	   3216	  21912	   5598	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:28:23 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17380	   1316	   3216	  21912	   5598	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:28:58 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17416	   1316	   3212	  21944	   55b8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:30:08 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17408	   1316	   3212	  21936	   55b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:30:13 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17392	   1316	   3212	  21920	   55a0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:30:27 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:30:38 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17396	   1316	   3216	  21928	   55a8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:30:39 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:31:22 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:5: error: unknown type name 'byte'
+     byte * words = generate(128,0xFF);
+     ^~~~
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+src/subdir.mk:27: recipe for target 'src/helloworld.o' failed
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:31:55 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:20: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+     char * words = generate(128,0xFF);
+                    ^~~~~~~~
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17400	   1316	   3212	  21928	   55a8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:32:03 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:20: error: too few arguments to function 'generate'
+     char * words = generate(128);
+                    ^~~~~~~~
+In file included from ../src/helloworld.c:52:0:
+../src/generate.h:4:7: note: declared here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+src/subdir.mk:27: recipe for target 'src/helloworld.o' failed
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+make: *** [src/helloworld.o] Error 1
+19:32:08 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:7: error: conflicting types for 'generate'
+ int * generate(int words)
+       ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:26: error: 'bits' undeclared (first use in this function); did you mean 'puts'?
+   generate[i] = rand() & bits;
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+                          ^~~~
+                          puts
+../src/generate.c:12:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/generate.o] Error 1
+19:32:11 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:7: error: conflicting types for 'generate'
+ int * generate(int words)
+       ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:26: error: 'bits' undeclared (first use in this function); did you mean 'puts'?
+   generate[i] = rand() & bits;
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+                          ^~~~
+                          puts
+../src/generate.c:12:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/generate.o] Error 1
+19:32:15 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:7: error: conflicting types for 'generate'
+ int * generate(int words)
+       ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:26: error: 'bits' undeclared (first use in this function); did you mean 'puts'?
+   generate[i] = rand() & bits;
+                          ^~~~
+                          puts
+../src/generate.c:12:26: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+../src/generate.c:14:9: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+  return generate;
+         ^~~~~~~~
+make: *** [src/generate.o] Error 1
+19:32:19 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:8: error: conflicting types for 'generate'
+ char * generate(int words)
+        ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+../src/generate.c: In function 'generate':
+../src/generate.c:12:26: error: 'bits' undeclared (first use in this function); did you mean 'puts'?
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+   generate[i] = rand() & bits;
+                          ^~~~
+                          puts
+../src/generate.c:12:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/generate.o] Error 1
+19:32:33 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:8: error: conflicting types for 'generate'
+ char * generate(int words)
+        ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+ int * generate(int words, int bits);
+       ^~~~~~~~
+make: *** [src/generate.o] Error 1
+19:32:48 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:8: error: conflicting types for 'generate'
+ char * generate(int words)
+        ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:7: note: previous declaration of 'generate' was here
+ int * generate(int words, int bits);
+       ^~~~~~~~
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+make: *** [src/generate.o] Error 1
+19:32:55 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+../src/generate.c:5:8: error: conflicting types for 'generate'
+ char * generate(int words)
+        ^~~~~~~~
+In file included from ../src/generate.c:3:0:
+../src/generate.h:4:8: note: previous declaration of 'generate' was here
+ char * generate(int words, int bits);
+        ^~~~~~~~
+make: *** [src/generate.o] Error 1
+src/subdir.mk:27: recipe for target 'src/generate.o' failed
+19:33:00 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17368	   1316	   3212	  21896	   5588	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:33:18 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17372	   1316	   3216	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:33:22 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17376	   1316	   3212	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:33:36 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:34:06 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17376	   1316	   3212	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:34:07 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:34:13 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17376	   1316	   3212	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:35:07 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17408	   1316	   3212	  21936	   55b0	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:35:14 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17412	   1316	   3216	  21944	   55b8	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:35:15 **** Incremental Build of configuration Debug for project MainProgram ****
+make all 
+make: Nothing to be done for 'all'.
+19:35:24 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/generate.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/generate.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/generate.d" -MT"src/generate.o" -o "src/generate.o" "../src/generate.c"
+Finished building: ../src/generate.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17376	   1316	   3212	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:35:32 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17372	   1316	   3216	  21904	   5590	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+19:35:36 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17368	   1316	   3212	  21896	   5588	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 

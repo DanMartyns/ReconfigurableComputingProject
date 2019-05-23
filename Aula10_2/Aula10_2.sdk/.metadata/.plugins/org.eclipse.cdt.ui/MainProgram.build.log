@@ -1,0 +1,29 @@
+19:35:36 **** Auto Build of configuration Debug for project MainProgram ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../MainProgram_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:9: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+         MB_Sleep(100);
+         ^~~~~~~~
+In file included from ../src/helloworld.c:51:0:
+../../MainProgram_bsp/microblaze_0/include/microblaze_sleep.h:119:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: MainProgram.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../MainProgram_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "MainProgram.elf"  ./src/generate.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MainProgram.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size MainProgram.elf  |tee "MainProgram.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17368	   1316	   3212	  21896	   5588	MainProgram.elf
+Finished building: MainProgram.elf.size
+ 
+
+19:35:36 Build Finished (took 116ms)
+

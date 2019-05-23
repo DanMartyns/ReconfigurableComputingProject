@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue May 21 20:10:57 2019
+# Process ID: 14953
+# Current directory: /tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/webtalk/webtalk.log
+# Journal file: /tools/Xilinx/Vivado/2018.3/bin/Aula10_2/Aula10_2.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

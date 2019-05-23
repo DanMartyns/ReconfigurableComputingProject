@@ -1,0 +1,7 @@
+int generate(int words,int bits)
+{
+	for( int i = 0; ;i++){
+
+	}
+	return ;
+}

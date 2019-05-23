@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "generate.h"
+
+int * generate(int words,int bits)
+{
+	//int generate[words];
+	int * generate;
+	generate = malloc(words*sizeof(int));
+
+	for( int i = 0; i < words ;i++){
+		generate[i] = rand() & bits;
+	}
+	return generate;
+}
